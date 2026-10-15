@@ -1,0 +1,286 @@
+{
+  "日期": "2026-10-15",
+  "程序": "次元库 Windows 复刻版",
+  "版本": "0.1.0",
+  "平台": "Windows x64 / .NET Framework4.8 / WebView2",
+  "原APK": {
+    "bytes": 36901390,
+    "sha256": "0084f885a983c24ff3997e8525b4cc80678e980ccea77093a995b1f687c752cb",
+    "unchanged": true,
+    "文件名": "265.apk（用户提供，不再分发）"
+  },
+  "离线检查": {
+    "通过": 34,
+    "失败": 0,
+    "分组": {
+      "核心协议与状态": 17,
+      "内容解析": 9,
+      "真实字段归一化": 3,
+      "桥接与图片及MP4范围": 3,
+      "AGE普通传输": 1,
+      "断网恢复": 1
+    }
+  },
+  "源码包": {
+    "独立重建通过": true,
+    "重建后完整离线检查通过": true,
+    "暂存源码与工作源码逐文件哈希一致": true,
+    "构建说明": "源码包解压后执行 build.ps1 和 test-all.ps1；固定依赖随包提供"
+  },
+  "解压运行": {
+    "中文与空格路径": true,
+    "核心检查": {
+      "started": "2026-10-15T13:04:02.416Z",
+      "checks": [
+        {
+          "name": "homepage renders",
+          "pass": true,
+          "detail": 18
+        },
+        {
+          "name": "stale home does not overwrite favorites",
+          "pass": true,
+          "detail": "我的收藏0 部作品还没有记录打开作品后收藏，播放和阅读时会自动记录。"
+        },
+        {
+          "name": "comic directory",
+          "pass": true,
+          "detail": {
+            "chapters": 911,
+            "attempts": 1
+          }
+        },
+        {
+          "name": "real comic image decodes",
+          "pass": true,
+          "detail": {
+            "width": 800,
+            "height": 1271
+          }
+        },
+        {
+          "name": "comic page flip",
+          "pass": true,
+          "detail": {
+            "initialPage": 0,
+            "page": 1,
+            "width": 800
+          }
+        },
+        {
+          "name": "real search to detail link",
+          "pass": true,
+          "detail": 2
+        },
+        {
+          "name": "real video playback",
+          "pass": true,
+          "detail": {
+            "time": 3.785795,
+            "width": 1920,
+            "height": 1080,
+            "message": ""
+          }
+        },
+        {
+          "name": "playback speed",
+          "pass": true,
+          "detail": 1.5
+        },
+        {
+          "name": "seek",
+          "pass": true,
+          "detail": {
+            "time": 31.001541,
+            "paused": false,
+            "seeking": false,
+            "readyState": 4,
+            "message": ""
+          }
+        },
+        {
+          "name": "fullscreen",
+          "pass": true,
+          "detail": true
+        },
+        {
+          "name": "auto next episode",
+          "pass": true,
+          "detail": 1
+        },
+        {
+          "name": "next episode real playback",
+          "pass": true,
+          "detail": {
+            "time": 2.653182,
+            "width": 1920
+          }
+        },
+        {
+          "name": "state persisted",
+          "pass": true,
+          "detail": {
+            "favorites": 1,
+            "history": [
+              {
+                "title": "青之芦苇 第二季",
+                "position": 30.081749
+              },
+              {
+                "title": "一人之下",
+                "position": 1
+              }
+            ]
+          }
+        }
+      ],
+      "finished": "2026-10-15T13:05:04.707Z"
+    },
+    "重启恢复": {
+      "started": "2026-10-15T13:06:13.528Z",
+      "checks": [
+        {
+          "name": "favorite survives restart",
+          "pass": true,
+          "detail": 1
+        },
+        {
+          "name": "comic position survives restart",
+          "pass": true,
+          "detail": 1
+        },
+        {
+          "name": "comic resume opens saved page",
+          "pass": true,
+          "detail": {
+            "page": 1,
+            "saved": 1
+          }
+        },
+        {
+          "name": "video position survives restart",
+          "pass": true,
+          "detail": 30.081749
+        },
+        {
+          "name": "video resume restores seek",
+          "pass": true,
+          "detail": {
+            "saved": 30.081749,
+            "time": 30.081749,
+            "paused": false,
+            "elapsedMs": 16066
+          }
+        }
+      ],
+      "finished": "2026-10-15T13:06:45.803Z"
+    }
+  },
+  "额外实测": {
+    "分类设置": {
+      "checks": [
+        {
+          "name": "live catalog",
+          "pass": true,
+          "detail": 20
+        },
+        {
+          "name": "category filter request renders",
+          "pass": true,
+          "detail": 20
+        },
+        {
+          "name": "theme changes",
+          "pass": true,
+          "detail": "dark"
+        },
+        {
+          "name": "source list108",
+          "pass": true,
+          "detail": 108
+        },
+        {
+          "name": "remove record",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "name": "clear record list",
+          "pass": true,
+          "detail": 0
+        }
+      ],
+      "finished": "2026-10-15T07:36:59.544Z"
+    },
+    "签名地址续播": {
+      "checks": [
+        {
+          "name": "resume matches stable episode despite refreshed URL",
+          "pass": true,
+          "detail": {
+            "saved": 210,
+            "actual": 210.206978,
+            "index": 1,
+            "line": 2
+          }
+        }
+      ],
+      "finished": "2026-10-15T07:35:22.509Z"
+    },
+    "审查修复回归": {
+      "checks": [
+        {
+          "name": "switching line stops old media before new identity",
+          "pass": true,
+          "detail": {
+            "hasOldVideo": false,
+            "selected": 0,
+            "historyLine": "bfzym3u8"
+          }
+        },
+        {
+          "name": "stale source callback cannot put video in comic detail",
+          "pass": true,
+          "detail": {
+            "answer": false,
+            "hasVideo": false
+          }
+        }
+      ],
+      "finished": "2026-10-15T12:59:06.994Z"
+    },
+    "关闭窗口": {
+      "exit_code": 0,
+      "unhandled_exception_log": false,
+      "checks": [
+        {
+          "name": "close source during initialization",
+          "pass": true
+        },
+        {
+          "name": "main close during resource loads requested",
+          "pass": true
+        }
+      ]
+    }
+  },
+  "独立审查": {
+    "方式": "另一个上下文只读审查；主助手一次修复和完整回归，无第二轮审查",
+    "Critical": 0,
+    "Important已修复": 5,
+    "延期Minor": 0
+  },
+  "范围与限制": [
+    "原服务配置108项不代表108项全部兼容；主要实测AGE和Mwai普通漫画来源",
+    "bfzym3u8实际正片及下一集播放通过；其他线路可能403或404",
+    "已实现缺少WebView2提示，未卸载本机运行环境进行此情形测试",
+    "原APK没有在安卓设备或模拟器运行；桌面界面按电脑习惯适配",
+    "一轮解压测试曾遇到漫画详情暂时失败；随后同接口复测及最终解压完整验收均通过",
+    "部分封面来源拒绝请求时显示占位图",
+    "不含广告任务、支付、社区、云端同步、DLNA及安卓超分辨率"
+  ],
+  "运行证据目录": "运行证据",
+  "程序文件清单": "程序文件校验.json",
+  "项目状态": "残次品 / 未完成原型",
+  "验收解释": "历史样例和离线检查记录，不代表完整复刻或日常普遍可用。"
+}

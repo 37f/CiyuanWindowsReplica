@@ -1,0 +1,2 @@
+using System;using System.IO;using CiyuanWindows;
+class LiveProxyCheck {static int Main(string[] args){try{var media=J.Parse(File.ReadAllText(args[0]));using(var proxy=new AssetProxy()){var result=proxy.FetchAsync(J.S(media,"url"),J.S(media,"referer"),"").GetAwaiter().GetResult();Console.WriteLine(result.Status+" "+result.Headers+" bytes="+result.Body.Length);File.WriteAllBytes(args[1],result.Body);}return 0;}catch(Exception e){Console.WriteLine(e);return 1;}}}
