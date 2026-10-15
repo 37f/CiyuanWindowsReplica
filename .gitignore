@@ -2,5 +2,5 @@ build/
 __pycache__/
 *.log
 *.tmp
-WebView2/
+/WebView2/
 state.json
